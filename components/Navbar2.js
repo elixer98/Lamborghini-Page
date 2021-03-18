@@ -17,9 +17,10 @@ const Navbar2 = () => {
           <li><a href="/model" passHref>modelos</a></li>
           <li><a href="/concesionario" passHref>concesionario</a></li>
           <li><a href="/contact" passHref>Contacto</a></li> 
+          <li><a href="/mapa" passHref>mapa</a></li> 
         </ul>
       </nav>
-      <label for="nav-toggle" className="nav-toggle-label">
+      <label htmlFor="nav-toggle" className="nav-toggle-label">
         <span></span>
       </label>
     </header>
