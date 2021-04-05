@@ -12,6 +12,7 @@ import Cierre from '../components/Cierre'
 
 
 
+
 export default function Home() {
 
   const [scrollHeight, setScrollHeight] = useState(0);
@@ -24,6 +25,29 @@ export default function Home() {
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
   }, [scrollHeight]);
+
+  const getData=()=>{
+    fetch('http://localhost:9000/testAPI'
+    ,{
+      headers : { 
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+       }
+    }
+    )
+      .then(function(response){
+        console.log(response)
+        return response.json();
+      })
+      .then(function(myJson) {
+        console.log(myJson);
+      });
+  }
+  
+  useEffect(()=>{
+    getData()
+  },[])
+
 
   return (
     <>
